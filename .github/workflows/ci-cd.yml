@@ -20,6 +20,6 @@ jobs:
 
       - name: Build and push image
         run: |
-          docker build -t thanvish1237/web-app .
-          docker tag thanvish1237/web-app:latest
-          docker push thanvish1237/web-app:latest
+          docker build -t thanvish1237/jtv_web-app .
+          docker tag thanvish1237/jtv_web-app:latest
+          docker push thanvish1237/jtv_web-app:latest
