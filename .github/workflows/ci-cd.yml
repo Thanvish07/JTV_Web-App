@@ -17,9 +17,12 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Cache Docker layers
-        uses: docker/cache-action@v2
+        uses: actions/cache@v3
         with:
           path: /tmp/.buildx-cache
+          key: $GITHUB_SHA-docker-layers
+          restore-keys: |
+            $GITHUB_SHA-docker-layers
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
